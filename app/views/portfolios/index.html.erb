@@ -4,7 +4,7 @@
 
 <% @portfolio_items.each  do |portf_item| %>
 
-	<p><%= portf_item.title %>	</p>
+	<p><%= link_to portf_item.title, portfolio_path(portf_item) %>	</p>
 	<p><%= portf_item.subtitle %>	</p>
 	<p><%= portf_item.body %>	</p>
 	<%= image_tag portf_item.thumb_image if !portf_item.thumb_image.nil? %>
